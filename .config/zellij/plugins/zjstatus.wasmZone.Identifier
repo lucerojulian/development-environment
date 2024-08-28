@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/g4rcez/dotfiles/blob/master/config/zellij/plugins/zjstatus.wasm
+HostUrl=https://raw.githubusercontent.com/g4rcez/dotfiles/master/config/zellij/plugins/zjstatus.wasm
