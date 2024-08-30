@@ -151,6 +151,7 @@ Verify and fix plugin dependencies (To verify errors, use :LazyHealth) and insta
 brew install ripgrep
 brew install luarocks
 brew install fd
+brew install fzf
 brew install lazygit
 brew install node@20 # @version
 ```
