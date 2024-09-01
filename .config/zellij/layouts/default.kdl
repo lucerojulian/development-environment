@@ -1,41 +1,40 @@
 layout {
-    pane size=1 {
-        borderless true
-        plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
-            command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
-            command_git_branch_format      "#[fg=blue] {stdout} "
-            command_git_branch_interval    "10"
-            command_git_branch_rendermode  "dynamic"
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+                command_git_branch_command     "git rev-parse --abbrev-ref HEAD"
+                command_git_branch_format      "#[fg=blue] {stdout} "
+                command_git_branch_interval    "10"
+                command_git_branch_rendermode  "dynamic"
 
 
-            hide_frame_for_single_pane "false"
-            mode_enter_search  "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_locked        "#[bg=#991b1b,fg=#181825] {name} "
-            mode_move          "#[bg=#155e75,fg=#181825] {name} "
-            mode_normal        "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_pane          "#[bg=#c2410c,fg=#181825] {name} "
-            mode_prompt        "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_rename_pane   "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_rename_tab    "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_resize        "#[bg=#065f46,fg=#181825] {name} "
-            mode_scroll        "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_search        "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_session       "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_tab           "#[bg=#89b4fa,fg=#181825] {name} "
-            mode_tmux          "#[bg=#ffc387,fg=#181825] {name} "
+                hide_frame_for_single_pane "false"
 
-            tab_active               "#[fg=#89b4fa,bg=#16161E,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
-            tab_floating_indicator   "󰉈 "
-            tab_fullscreen_indicator "□ "
-            tab_normal               "#[fg=#373749,bg=#16161E] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
-            tab_sync_indicator       "  "
+                mode_enter_search  "#[bg=#89b4fa,fg=#181825,bold]  {name} "
+                mode_locked        "#[bg=#ff0000,fg=#FFFFFF,bold]  {name} "
+                mode_move          "#[bg=#deff0a,fg=#000000,bold]  {name} "
+                mode_normal        "#[bg=#a1ff0a,fg=#000000,bold]  {name} "
+                mode_pane          "#[bg=#147df5,fg=#000000,bold]  {name} "
+                mode_prompt        "#[bg=#89b4fa,fg=#181825,bold]  {name} "
+                mode_rename_pane   "#[bg=#89b4fa,fg=#181825,bold]  {name} "
+                mode_rename_tab    "#[bg=#89b4fa,fg=#181825,bold]  {name} "
+                mode_resize        "#[bg=#ffd300,fg=#000000,bold]  {name} "
+                mode_scroll        "#[bg=#89b4fa,fg=#181825,bold]  {name} "
+                mode_search        "#[bg=#89b4fa,fg=#181825,bold]  {name} "
+                mode_session       "#[bg=#89b4fa,fg=#181825,bold]  {name} "
+                mode_tab           "#[bg=#be0aff,fg=#000000,bold]  {name} "
+                mode_tmux          "#[bg=#ffc387,fg=#181825,bold]  {name} "
 
-            format_left  "{mode}#[fg=#89B4FA,bg=#16161E] #[bg=#16161E] {tabs}"
-            format_space "#[bg=#16161E]"
+                tab_active               "#[fg=#a1ff0a,bg=#16161E,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+                tab_floating_indicator   "󰉈 "
+                tab_fullscreen_indicator "□ "
+                tab_normal               "#[fg=#373749,bg=#16161E] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+                tab_sync_indicator       "  "
+
+                format_left  "{mode}#[fg=#89B4FA,bg=#16161E] #[bg=#16161E] {tabs}"
+                format_space "#[bg=#16161E]"
+            }
         }
-    }
-    pane {
-        borderless true
-        focus true
     }
 }
