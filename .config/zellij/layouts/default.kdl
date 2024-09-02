@@ -12,9 +12,9 @@ layout {
                 hide_frame_for_single_pane "false"
 
                 mode_enter_search  "#[bg=#89b4fa,fg=#181825,bold]  {name} "
-                mode_locked        "#[bg=#ff0000,fg=#FFFFFF,bold]  {name} "
+                mode_locked        "#[bg=#f94144,fg=#FFFFFF,bold]  {name} "
                 mode_move          "#[bg=#deff0a,fg=#000000,bold]  {name} "
-                mode_normal        "#[bg=#a1ff0a,fg=#000000,bold]  {name} "
+                mode_normal        "#[bg=#a0e426,fg=#000000,bold]  {name} "
                 mode_pane          "#[bg=#147df5,fg=#000000,bold]  {name} "
                 mode_prompt        "#[bg=#89b4fa,fg=#181825,bold]  {name} "
                 mode_rename_pane   "#[bg=#89b4fa,fg=#181825,bold]  {name} "
@@ -26,14 +26,14 @@ layout {
                 mode_tab           "#[bg=#be0aff,fg=#000000,bold]  {name} "
                 mode_tmux          "#[bg=#ffc387,fg=#181825,bold]  {name} "
 
-                tab_active               "#[fg=#a1ff0a,bg=#16161E,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+                tab_active               "#[fg=#a1ff0a,bg=#0F1117,bold] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
                 tab_floating_indicator   "󰉈 "
                 tab_fullscreen_indicator "□ "
-                tab_normal               "#[fg=#373749,bg=#16161E] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
+                tab_normal               "#[fg=#373749,bg=#0F1117] {name} {fullscreen_indicator}{sync_indicator}{floating_indicator}"
                 tab_sync_indicator       "  "
 
-                format_left  "{mode}#[fg=#89B4FA,bg=#16161E] #[bg=#16161E] {tabs}"
-                format_space "#[bg=#16161E]"
+                format_left  "{mode}#[bg=#0F1117] #[bg=#0F1117] {tabs}"
+                format_space "#[bg=#0F1117]"
             }
         }
     }

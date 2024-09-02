@@ -13,7 +13,7 @@ return {
           .. "--color=always --smart-case -g '!{.git,node_modules}/*' -g '!package-lock.json'",
       },
       files = {
-        fd_opts = "--type f --exclude node_modules",
+        fd_opts = '--type f --hidden --exclude .git --exclude node_modules',
       },
     })
   end,
